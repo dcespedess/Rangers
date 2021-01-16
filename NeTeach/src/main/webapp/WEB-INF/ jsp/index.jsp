@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="navbar" id="navbar">
-        <a href="/index" class="activo">Home</a>
+        <a href="/" class="activo">Home</a>
         <a href="/tutores">Tutores</a>
         <a href="/registro">Registro</a>
         <a href="/testimonios">Testimonios</a>

@@ -29,6 +29,11 @@ public class WebController {
 	@Autowired
 	public ITestimonioRepository repTestimonio;
 	
+	@GetMapping("/") 
+    public String inicio() { 
+        return "index"; 
+        }
+	
 
 	@GetMapping("/index") 
 	  public String home() { 
