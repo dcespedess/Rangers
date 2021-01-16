@@ -9,12 +9,11 @@
 <title>NETeach</title>
 </head>
 <body>
-<body>
     <div class="navbar" id="navbar">
-        <a href="">Home</a>
-        <a href="">Tutores</a>
-        <a href="">Registro</a>
-        <a href="" class="activo">Testimonios</a>
+        <a href="/index">Home</a>
+        <a href="/tutores">Tutores</a>
+        <a href="/registro">Registro</a>
+        <a href="/testimonios" class="activo">Testimonios</a>
     </div>
 
 </body>

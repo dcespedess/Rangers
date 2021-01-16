@@ -10,10 +10,10 @@
 </head>
 <body>
 <div class="navbar" id="navbar">
-        <a href="" >Home</a>
-        <a href="">Tutores</a>
-        <a href="" class="activo">Registro</a>
-        <a href="">Testimonios</a>
+        <a href="/index" >Home</a>
+        <a href="/tutores">Tutores</a>
+        <a href="/registro" class="activo">Registro</a>
+        <a href="/testimonios">Testimonios</a>
     </div>
 
 </body>
