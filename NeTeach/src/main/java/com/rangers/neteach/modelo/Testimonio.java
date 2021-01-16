@@ -35,7 +35,13 @@ public class Testimonio {
 	this.desctes = desctes;
   }
   
-  public int getId() {
+  
+  
+  public Testimonio() {
+	super();
+}
+
+public int getId() {
 	return id;
   }
   

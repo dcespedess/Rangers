@@ -45,6 +45,13 @@ public class Usuario {
 	}
 
 
+
+	public Usuario(int id) {
+		super();
+		this.id = id;
+	}
+
+
 	public int getId() {
 		return id;
 	}
