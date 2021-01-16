@@ -4,9 +4,9 @@ body {
   font-family: Spartan;
 }
 
-.navbar {
-    background-color: #000807;
-    background-image: url(https://images.photowall.com/products/58243/galaxy-1.jpg?h=699&q=85);
+.navbar {    
+	background: rgb(2,0,36);
+	background: linear-gradient(137deg, rgba(2,0,36,1) 0%, rgba(57,6,88,1) 66%, rgba(35,72,150,1) 100%);
     overflow: hidden;
     
   }
