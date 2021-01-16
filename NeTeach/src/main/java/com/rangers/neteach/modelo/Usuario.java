@@ -24,7 +24,8 @@ public class Usuario {
 	@Max(99)
 	private int edad;
 	
-	
+	private String correo;
+	private int celular;
 	private String sexo;
 	
 	@Column (length = 100)
@@ -34,14 +35,16 @@ public class Usuario {
 		super();
 	}
 
-	public Usuario(int id, String nombre, String apellido, String materia, @Min(18) @Max(99) int edad, String sexo,
-			String descUsuario) {
+	public Usuario(int id, String nombre, String apellido, String materia, @Min(18) @Max(99) int edad, String correo,
+			int celular, String sexo, String descUsuario) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.materia = materia;
 		this.edad = edad;
+		this.correo = correo;
+		this.celular = celular;
 		this.sexo = sexo;
 		this.descUsuario = descUsuario;
 	}
@@ -86,6 +89,22 @@ public class Usuario {
 		this.edad = edad;
 	}
 
+	public String getCorreo() {
+		return correo;
+	}
+
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
+
+	public int getCelular() {
+		return celular;
+	}
+
+	public void setCelular(int celular) {
+		this.celular = celular;
+	}
+
 	public String getSexo() {
 		return sexo;
 	}
@@ -105,11 +124,9 @@ public class Usuario {
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", materia=" + materia
-				+ ", edad=" + edad + ", sexo=" + sexo + ", descUsuario=" + descUsuario + "]";
+				+ ", edad=" + edad + ", correo=" + correo + ", celular=" + celular + ", sexo=" + sexo + ", descUsuario="
+				+ descUsuario + "]";
 	}
-	
-	
-
 
 
 	
