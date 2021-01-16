@@ -1,11 +1,31 @@
 package com.rangers.neteach.modelo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+
+@Entity
 public class Usuario {
+	@Id
+	@GeneratedValue(strategy= GenerationType.AUTO)
 	private int id;
+	
 	private String nombre;
+	
 	private String apellido;
+	
+	@Min(18)
+	@Max(99)
 	private int edad;
+	
+	
 	private String sexo;
+	
+	@Column (length = 100)
 	private String descUsuario;
 	
 	

@@ -1,9 +1,27 @@
 package com.rangers.neteach.modelo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+
+@Entity
 public class Testimonio {
+	
+@Id
+@GeneratedValue(strategy= GenerationType.AUTO)
   private int id;
+@Column
   private String nombretes;
+
+@Min(18)
+@Max(99)
   private int edadtes;
+
+@Column (length = 100)
   private String desctes;
   
   public Testimonio(int id) {
