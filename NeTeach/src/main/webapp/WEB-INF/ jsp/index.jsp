@@ -9,7 +9,7 @@
 <title>NETeach</title>
 </head>
 <body>
-    <div class="mavbar">
+    <div class="navbar">
         <a href="" class="activo">Home</a>
         <a href="">Tutores</a>
         <a href="">Registro</a>
