@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Usuario {
@@ -14,21 +15,30 @@ public class Usuario {
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private int id;
 	
+	@Column(length = 100)
+	
 	private String nombre;
 	
+	@Column(length = 100)
 	private String apellido;
 	
+	@Column(length = 100)
 	private String materia;
 	
 	@Min(18)
 	@Max(99)
 	private int edad;
 	
+	@Column(length = 150)
 	private String correo;
+	
+	@Column(nullable = false )
 	private int celular;
+	
 	private String sexo;
 	
-	@Column (length = 100)
+	@Column (length = 200)
+	@Size(max = 200, message="Máximo de caractereses permitidos: 200")
 	private String descUsuario;
 
 	public Usuario() {

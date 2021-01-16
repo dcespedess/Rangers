@@ -7,8 +7,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
- integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+	integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="resources/css/style.css">
 <script type="text/javascript" src="resources/js/script.js"></script>
 <link href="resources/css/style.css">
@@ -60,29 +62,35 @@
 
 		<form:form class="well span" action="agregarTutor" method="POST"
 			modelAttribute="usuario">
-							<div class="span3">
+			<div class="span3">
 
-					<form:label path="nombre">Nombre</form:label>
-					<form:input path="nombre" cssClass="span3" type="text" required="" />
-					<form:errors path="nombre"></form:errors>
-					<form:label path="apellido">Apellidos</form:label>
-					<form:input path="apellido" class="span3"
-						placeholder="Tús apellidos" type="text" required=""/>
-						<form:errors path="apellido"></form:errors>
-					<form:label path="edad">Edad </form:label>
-					<form:input path="edad" class="span3" placeholder="Tú edad"
-						type="number" required=""/>
-						<form:errors path="edad"></form:errors>
-					<form:label path="correo">Correo Electrónico</form:label>
-					<form:input path="correo" class="span3"
-						placeholder="Tú correo electrónico" type="email" required=""/>
-						<form:errors path="correo"></form:errors>
-						<form:radiobutton path="sexo" value="hombre" required=""/>Hombre
-						<form:radiobutton path="sexo" value="mujer" required=""/>Mujer
-						<form:errors path="sexo"></form:errors>
-					<form:label path="materia">Materia/Área</form:label>
-					<form:select path="materia" class="span3" id="subject"
-						name="subject" >
+				<form:label path="nombre">Nombre</form:label>
+				<form:input path="nombre" cssClass="span3" type="text" required="" />
+				<form:errors path="nombre"></form:errors>
+				<form:label path="apellido">Apellidos</form:label>
+				<form:input path="apellido" class="span3"
+					 type="text" required="" />
+				<form:errors path="apellido"></form:errors>
+				<form:label path="edad">Edad </form:label>
+				<form:input path="edad" class="span3" placeholder="Tú edad"
+					type="number" required="" />
+				<form:errors path="edad"></form:errors>
+				<form:label path="celular">Celular </form:label>
+				<form:input path="celular" class="span3" type="number" required="" />
+				<form:errors path="celular"></form:errors>
+				<form:label path="correo">Correo Electrónico</form:label>
+				<form:input path="correo" class="span3"
+					type="email" required="" />
+				<form:errors path="correo"></form:errors>
+				<form:radiobutton path="sexo" value="hombre" required="" />
+				Hombre
+				<form:radiobutton path="sexo" value="mujer" required="" />
+				Mujer
+				<form:errors path="sexo"></form:errors>
+				<form:label path=""></form:label>
+				<form:label path="materia">Materia/Área</form:label>
+				<form:select path="materia" class="span3" id="subject"
+					name="subject">
 					<form:option value="" />
 					Escoge una materia
 
@@ -97,18 +105,18 @@
 					<form:option value="musica" label="Musica" />
 					Música
 					</form:select>
-					<form:errors path="materia"></form:errors>
-				</div>
+				<form:errors path="materia"></form:errors>
+			</div>
 
-				<div class="span5">
-					<form:label path="descUsuario">Reseña</form:label>
-					<form:textarea path="descUsuario" class="input-xlarge span5" id="message" name="message"
-						rows="10" required=""/>
-						<form:errors path="descUsuario"></form:errors>
-   
+			<div class="span5">
+				<form:label path="descUsuario">Reseña</form:label>
+				<form:textarea path="descUsuario" class="input-xlarge span5"
+					id="message" name="message" rows="10" required="" />
+				<form:errors path="descUsuario"></form:errors>
 
-					<form:button class="btn btn-primary" type="submit">Enviar</form:button>
-				</div>
+
+				<form:button class="btn btn-primary" type="submit">Enviar</form:button>
+			</div>
 		</form:form>
 	</div>
 </body>

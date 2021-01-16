@@ -56,7 +56,8 @@ public class WebController {
 	}
 	
 	@GetMapping("/tutores") 
-	public String tutores() { 
+	public String tutores(Model model) { 
+		model.addAttribute("tutores", repUsuario.findAll());
 		  return "tutores"; 
 	}
 	
