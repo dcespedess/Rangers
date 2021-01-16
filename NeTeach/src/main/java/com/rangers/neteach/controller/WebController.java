@@ -57,29 +57,29 @@ public class WebController {
 	
 	@GetMapping("/tutores") 
 	public String tutores(Model model) { 
-		model.addAttribute("tutores", repUsuario.findAll());
+		model.addAttribute("usuarios", repUsuario.findAll());
 		  return "tutores"; 
 	}
 	
 	
 	/* FILTROS DE BUSQUEDA */
-	@PostMapping("buscarNombre")
-	public String buscarNombre(String nombre, ModelMap model) {
-		model.put("usuarios", repUsuario.findByNombre(nombre));
+	@GetMapping("buscarNombre")
+	public String buscarNombre(ModelMap model) {
+		model.put("usuarios", repUsuario.findAllByOrderByNombreAsc());
 
 		return "tutores";
 	}
 	
-	@PostMapping("buscarApellido")
-	public String buscarApellido(String apellido, ModelMap model) {
-		model.put("usuarios", repUsuario.findByApellido(apellido));
+	@GetMapping("buscarApellido")
+	public String buscarApellido(ModelMap model) {
+		model.put("usuarios", repUsuario.findAllByOrderByApellidoAsc());
 
 		return "tutores";
 	}
 	
-	@PostMapping("buscarArea")
-	public String buscarArea(String materia, ModelMap model) {
-		model.put("usuarios", repUsuario.findByMateria(materia));
+	@GetMapping("ordenarArea")
+	public String ordenarArea(ModelMap model) {
+		model.put("usuarios", repUsuario.findAllByOrderByMateriaAsc());
 
 		return "tutores";
 	}
@@ -91,10 +91,18 @@ public class WebController {
 		return "tutores";
 	}
 	
-	@PostMapping("buscarEdad")
-	public String buscarNombre(int edad, ModelMap model) {
-		model.put("usuarios", repUsuario.findByEdad(edad));
+	@GetMapping("buscarEdad")
+	public String buscarEdad( ModelMap model) {
+		model.put("usuarios", repUsuario.findAllByOrderByEdadAsc());
 
+		return "tutores";
+	}
+	
+	@PostMapping("buscarArea")
+	public String buscarR(String materia, ModelMap model) 
+	{
+		model.addAttribute("usuarios", repUsuario.findByMateria(materia));
+		
 		return "tutores";
 	}
 	
@@ -106,8 +114,8 @@ public class WebController {
 			return "registro";
 		} else {
 			repUsuario.save(u);
-			model.addAttribute("tutores", u);
-			model.addAttribute("tutores", repUsuario.findAll());
+			model.addAttribute("usuarios", u);
+			model.addAttribute("usuarios", repUsuario.findAll());
 			return "tutores";
 		}
 	}
