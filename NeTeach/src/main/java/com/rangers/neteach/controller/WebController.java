@@ -31,16 +31,14 @@ public class WebController {
 	@Autowired
 	public ITestimonioRepository repTestimonio;
 	
-	@GetMapping("/") 
-    public String inicio() { 
-        return "index"; 
-    }	
-
-	@GetMapping("/index") 
-	public String home() { 
-		  return "index"; 
-	}
 	
+	
+	@GetMapping("/")
+	public String home() {
+		return "index";
+	}
+
+		
 	@GetMapping("/registro") 
 	public String registro() { 
 		  return "registro"; 
@@ -56,9 +54,6 @@ public class WebController {
 		  return "tutores"; 
 	}
 	
-	@GetMapping("/error") 
-	public String error() { 
-		  return "error"; 
-	}
+	
 
 }
