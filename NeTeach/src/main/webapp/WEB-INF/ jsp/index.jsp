@@ -53,8 +53,6 @@
         </a>
     </div>
 
--navbar
--carrusel
 -descripcion
 -contacto
 -footer
