@@ -69,11 +69,15 @@ integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZD
         </a>
       </div>
 
-      
+      <div class="descripcion">
+        <h4>Nuestra mision es conectar estudiantes con tutores para facilitar su enseñanza y hacerla mas amena
+          etc blah blah blah
+        </h4>
+      </div>
 
--descripcion
--contacto
--footer
+      <div class="footer">
+        <p>Sitio creado por Daniel Cespedes & Angela Romero & Daniela Caicedo</p>
+      </div>
 
 
 </body>
