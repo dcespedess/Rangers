@@ -55,7 +55,7 @@ integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZD
             <img src="https://i.pinimg.com/originals/fe/02/66/fe026605b330d36bc0ca511ab9d636ee.jpg" class="d-block w-100" alt="...">
           	<div class="carousel-caption">
                 <h1>Enseñamos ♥ </h1>
-                <p>Texto cualquiera aaa </p>
+                <p>Texto cualquiera aaa</p>
               </div>
           </div>
         </div>
