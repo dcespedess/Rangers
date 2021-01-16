@@ -32,31 +32,26 @@ public class WebController {
 	@GetMapping("/") 
     public String inicio() { 
         return "index"; 
-        }
-	
+    }	
 
 	@GetMapping("/index") 
-	  public String home() { 
+	public String home() { 
 		  return "index"; 
-		  }
+	}
 	
 	@GetMapping("/registro") 
-	  public String registro() { 
+	public String registro() { 
 		  return "registro"; 
-		  }
+	}
 	
 	@GetMapping("/testimonios") 
-	  public String testimonios() { 
+	public String testimonios() { 
 		  return "testimonios"; 
-		  }
+	}
 	
 	@GetMapping("/tutores") 
-	  public String tutores() { 
+	public String tutores() { 
 		  return "tutores"; 
-		  }
-	
-	
-	
-	
+	}
 
 }
