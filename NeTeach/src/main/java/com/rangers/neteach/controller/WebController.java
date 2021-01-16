@@ -53,5 +53,10 @@ public class WebController {
 	public String tutores() { 
 		  return "tutores"; 
 	}
+	
+	@GetMapping("/error") 
+	public String error() { 
+		  return "error"; 
+	}
 
 }
