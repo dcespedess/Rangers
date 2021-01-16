@@ -9,6 +9,20 @@
 <title>NETeach</title>
 </head>
 <body>
+    <div class="mavbar">
+        <a href="" class="activo">Home</a>
+        <a href="">Tutores</a>
+        <a href="">Registro</a>
+        <a href="">Testimonios</a>
+    </div>
+
+
+-navbar
+-carrusel
+-descripcion
+-contacto
+-footer
+
 
 </body>
 </html>
