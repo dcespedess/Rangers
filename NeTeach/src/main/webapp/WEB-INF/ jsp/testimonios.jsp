@@ -3,8 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+<script type="text/javascript" src="resources/js/script.js"></script>
+<title>NETeach</title>
 </head>
 <body>
 
