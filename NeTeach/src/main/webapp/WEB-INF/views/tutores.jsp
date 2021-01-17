@@ -51,6 +51,10 @@ integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZD
                     <option value="lenguaje">Lenguaje</option>
                     <option value="historia">Historia</option>
                     <option value="musica">Musica</option>
+                    <option value="informatica">Informatica</option>
+                    <option value="fisica">Físca</option>
+                    <option value="quimica">Quimica</option>
+                    <option value="biologia">Biología</option>
                 </select><input type="submit" value="Filtrar">
             </form>
         </div>
@@ -62,17 +66,20 @@ integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZD
                     <option value="" selected>Escoja una opcion</option>
                     <option value="mujer">Mujer</option>
                     <option value="hombre">Hombre</option>
+                    <option value="otro">Otro</option>
                 </select><input type="submit" value="Filtrar">
             </form>
         </div>
     </div>
-
+<br>
 	<div class="card card-columns row"
 		style="background-color: black; display: block;">
 		<c:forEach items="${usuarios}" var="t">
-			<div class="card card-body text-center col-10 "
-				style="color: black; border-radius: 10px; text-align: justify; width: 480px; height: 450px">
-				<p hidden="${t.id}">
+			<div class="card card-body text-center  col-xs-12 "
+				style="color: black; border-radius: 10px; text-align: justify; width: 480px; height: 450px; background: rgb(133,138,138);
+background: linear-gradient(0deg, rgba(133,138,138,1) 0%, rgba(240,235,224,1) 100%); ">
+				<p hidden="${t.id}"> </p>
+				
 				<h4>${t.nombre} ${t.apellido}</h4>
 
 				<hr>

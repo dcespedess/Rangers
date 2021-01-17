@@ -15,6 +15,7 @@ public class Usuario {
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private int id;
 	
+	
 	@Column(length = 100)
 	
 	private String nombre;
@@ -58,6 +59,8 @@ public class Usuario {
 		this.sexo = sexo;
 		this.descUsuario = descUsuario;
 	}
+	
+
 
 	public int getId() {
 		return id;
@@ -133,9 +136,9 @@ public class Usuario {
 
 	@Override
 	public String toString() {
-		return "Usuario [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", materia=" + materia
-				+ ", edad=" + edad + ", correo=" + correo + ", celular=" + celular + ", sexo=" + sexo + ", descUsuario="
-				+ descUsuario + "]";
+		return "Usuario [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido
+				+ ", materia=" + materia + ", edad=" + edad + ", correo=" + correo + ", celular=" + celular + ", sexo="
+				+ sexo + ", descUsuario=" + descUsuario + "]";
 	}
 
 

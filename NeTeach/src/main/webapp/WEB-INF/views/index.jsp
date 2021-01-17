@@ -95,11 +95,15 @@
 			ejercicios de estudios para facilitar el aprendizaje de sus alumnos.
 		</h4>
 		<a class="boton" href="/registro">Inscribete!</a>
+		
 	</div>
 
 	<!--  Linkedin y GitHub -->
 	<div class="box">
+	
 		<div class="container">
+		<h1>Contacta a los desarrolladores acá</h1>
+		<br>
 			<div class="row">
 
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
