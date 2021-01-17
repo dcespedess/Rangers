@@ -72,12 +72,9 @@ integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZD
         </div>
     </div>
 <br>
-	<div class="card card-columns row"
-		style="background-color: black; display: block;">
+	<div class="cards">
 		<c:forEach items="${usuarios}" var="t">
-			<div class="card card-body text-center  col-xs-12 "
-				style="color: black; border-radius: 10px; text-align: justify; width: 480px; height: 450px; background: rgb(133,138,138);
-background: linear-gradient(0deg, rgba(133,138,138,1) 0%, rgba(240,235,224,1) 100%); ">
+			<div class="card card-body text-center">
 				<p hidden="${t.id}"> </p>
 				
 				<h4>${t.nombre} ${t.apellido}</h4>

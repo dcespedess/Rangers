@@ -184,3 +184,25 @@ input[type=submit] {
   text-decoration: none;
   display: inline-block; 
 }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-center{
+	flex: 30%;
+	margin: 15px;
+	color: black; 
+	border-radius: 10px; 
+	text-align: justify;   
+	width: 25%;
+	background: rgb(133,138,138);
+	background: linear-gradient(0deg, rgba(133,138,138,1) 0%, rgba(240,235,224,1) 100%);
+}
+
+@media (max-width: 650px) {
+  .text-center{
+    flex: 100%;
+  }
+}
