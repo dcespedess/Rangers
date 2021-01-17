@@ -52,7 +52,7 @@ public class WebController {
 	
 	@GetMapping("/testimonios") 
 	public String testimonios(Model model) { 
-		
+		model.addAttribute("testimonios", repTestimonio.findAll());
 		  return "testimonios"; 
 	}
 	
@@ -65,42 +65,42 @@ public class WebController {
 	
 	/* FILTROS DE BUSQUEDA */
 	@GetMapping("buscarNombre")
-	public String buscarNombre(ModelMap model) {
-		model.put("usuarios", repUsuario.findAllByOrderByNombreAsc());
+	public String buscarNombre(Model model) {
+		model.addAttribute("usuarios", repUsuario.findAllByOrderByNombreAsc());
 
 		return "tutores";
 	}
 	
 	@GetMapping("buscarApellido")
-	public String buscarApellido(ModelMap model) {
-		model.put("usuarios", repUsuario.findAllByOrderByApellidoAsc());
+	public String buscarApellido(Model model) {
+		model.addAttribute("usuarios", repUsuario.findAllByOrderByApellidoAsc());
 
 		return "tutores";
 	}
 	
 	@GetMapping("ordenarArea")
-	public String ordenarArea(ModelMap model) {
-		model.put("usuarios", repUsuario.findAllByOrderByMateriaAsc());
+	public String ordenarArea(Model model) {
+		model.addAttribute("usuarios", repUsuario.findAllByOrderByMateriaAsc());
 
 		return "tutores";
 	}
 	
 	@PostMapping("buscarSexo")
-	public String buscarSexo(String sexo, ModelMap model) {
-		model.put("usuarios", repUsuario.findBySexo(sexo));
+	public String buscarSexo(String sexo, Model model) {
+		model.addAttribute("usuarios", repUsuario.findBySexo(sexo));
 
 		return "tutores";
 	}
 	
 	@GetMapping("buscarEdad")
-	public String buscarEdad( ModelMap model) {
-		model.put("usuarios", repUsuario.findAllByOrderByEdadAsc());
+	public String buscarEdad( Model model) {
+		model.addAttribute("usuarios", repUsuario.findAllByOrderByEdadAsc());
 
 		return "tutores";
 	}
 	
 	@PostMapping("buscarArea")
-	public String buscarR(String materia, ModelMap model) 
+	public String buscarR(String materia, Model model) 
 	{
 		model.addAttribute("usuarios", repUsuario.findByMateria(materia));
 		
@@ -127,8 +127,8 @@ public class WebController {
 			return "testimonios";
 		} else {
 			repTestimonio.save(t);
-			model.addAttribute("testimonio", t);
-			model.addAttribute("testimonio", repTestimonio.findAll());
+			model.addAttribute("testimonios", t);
+			model.addAttribute("testimonios", repTestimonio.findAll());
 			return "testimonios";
 		}
 	}

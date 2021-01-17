@@ -61,28 +61,28 @@ integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZD
 					type="text" required="" />
 				<form:errors path="desctes"></form:errors><br>
 				
-				<form:button class="btn btn-outline-success btn-block" type="submit">Enviar</form:button>
+				<form:button class="btn btn-outline-info btn-block" type="submit">Enviar</form:button>
 			</div>
 		</form:form>
 	</div>
 </div>
 
- <c:forEach items="${testimonio}" var="test">
+<!-- asdas -->
+
+ <c:forEach items="${testimonios}" var="test">
 			<div class="card card-body text-center col-10 "
 				style="color: black; border-radius: 10px; text-align: justify; width: 480px; height: 450px">
 				<p hidden="${test.id}">
-				<h4>${test.nombre}</h4>
+				<h4>${test.nombretes}</h4>
 				
 				<hr>
-				<p>Nombre: ${test.nombretes}</p>
-				<p></p>
 				
 				<hr>
 				<p>Edad: ${test.edadtes}</p>
 				<p></p>
 				<hr>
 				<p>${test.desctes}</p>
-				<hr>
+			
 				
 			</div>
 		</c:forEach>
