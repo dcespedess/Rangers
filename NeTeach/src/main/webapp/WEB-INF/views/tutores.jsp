@@ -42,7 +42,7 @@ integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZD
 	
 	
     <div class="seleccion"> 
-        <div class="box">
+        <div class="boxbusqueda">
             <p>Filtrar por Materia</p>
             <form action="buscarArea" method="post">
                 <select id="materia" name="materia">
@@ -59,7 +59,7 @@ integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZD
             </form>
         </div>
 
-        <div class="box">
+        <div class="boxbusqueda">
             <p>Filtrar por sexo</p>
             <form action="buscarSexo" method="post">
                 <select id="sexo" name="sexo">

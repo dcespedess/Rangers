@@ -113,7 +113,10 @@ body {
   display: inline-block;
   border-radius: 30px;
   margin: 2%;
+}
 
+a:visited {
+  color: #FBF9FF;
 }
 
 .filtros:hover, .filtros:active {
@@ -130,30 +133,31 @@ body {
   flex-wrap: wrap;
 }
 
-.box {
+.boxbusqueda {
   flex: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 650px) {
-  .box {
+  .boxbusqueda {
     flex: 100%;
   }
 }
 
-.box select {
+.boxbusqueda select {
   background: rgb(2,0,36);
   background: linear-gradient(137deg, rgba(2,0,36,1) 0%, rgba(57,6,88,1) 66%, rgba(35,72,150,1) 100%);
-  color: #FBF9FF;
+  color: #B3B7EE;
   padding: 12px;
   width: 250px;
   border: none;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
   -webkit-appearance: button;
   appearance: button;
   outline: none;
 }
 
-.box::before {
+.boxbusqueda::before {
   top: 0;
   right: 0;
   width: 20%;
@@ -166,12 +170,12 @@ body {
   pointer-events: none;
 }
 
-.box:hover::before {
+.boxbusqueda:hover::before {
   color: rgba(255, 255, 255, 0.6);
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.box select option {
+.boxbusqueda select option {
   padding: 30px;
 }
 
