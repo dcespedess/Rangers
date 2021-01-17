@@ -24,46 +24,49 @@ integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZD
 	<div class="navbar" id="minavbar">
 		<div class="espacio"></div>
 		<div class="navelem">
-			<a href="/">Home</a> <a href="/tutores" class="activo">Tutores</a> <a
-				href="/registro">Registro</a> <a href="/testimonios">Testimonios</a>
+            <a href="/">Home</a> 
+            <a href="/tutores" class="activo">Tutores</a> 
+            <a href="/registro">Registro</a> 
+            <a href="/testimonios">Testimonios</a>
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 				<i class="fa fa-bars"></i>
 			</a>
 		</div>
-	</div>
+    </div>
+    
+    <div class="container">
+	<a class="filtros" href="buscarNombre">Ordenar por Nombre</a>
+	<a class="filtros" href="buscarApellido">Ordenar por Apellido</a>
+    <a class="filtros" href="buscarEdad">Ordenar por Edad</a>
+    </div>
+	
+	
+    <div class="seleccion"> 
+        <div class="box">
+            <p>Filtrar por Materia</p>
+            <form action="buscarArea" method="post">
+                <select id="materia" name="materia">
+                    <option value="" selected>Escoja una opcion</option>
+                    <option value="matematicas">Matematicas</option>
+                    <option value="lenguaje">Lenguaje</option>
+                    <option value="historia">Historia</option>
+                    <option value="musica">Musica</option>
+                </select><input type="submit" value="Filtrar">
+            </form>
+        </div>
 
-	<a href="buscarNombre">Ordenar por Nombre</a>
-	<a href="buscarApellido">Ordenar por Apellido</a>
-	<a href="buscarEdad">Ordenar por Edad</a>
-	<br>
-	<br>
+        <div class="box">
+            <p>Filtrar por sexo</p>
+            <form action="buscarSexo" method="post">
+                <select id="sexo" name="sexo">
+                    <option value="" selected>Escoja una opcion</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="hombre">Hombre</option>
+                </select><input type="submit" value="Filtrar">
+            </form>
+        </div>
+    </div>
 
-
-	<p>Filtrar por Materia</p>
-	<form action="buscarArea" method="post">
-		<select id="materia" name="materia">
-			<option value="" selected>Escoja una opcion</option>
-
-			<option value="matematicas">Matematicas</option>
-			<option value="lenguaje">Lenguaje</option>
-			<option value="historia">Historia</option>
-			<option value="musica">Musica</option>
-		</select> <input type="submit" value="Filtrar">
-	</form>
-	<br>
-	<br>
-
-
-	<p>Filtrar por sexo</p>
-	<form action="buscarSexo" method="post">
-		<select id="sexo" name="sexo">
-			<option value="" selected>Escoja una opcion</option>
-			<option value="mujer">Mujer</option>
-			<option value="hombre">Hombre</option>
-		</select> <input type="submit" value="Filtrar">
-	</form>
-
-	<br>
 	<div class="card card-columns row"
 		style="background-color: black; display: block;">
 		<c:forEach items="${usuarios}" var="t">
