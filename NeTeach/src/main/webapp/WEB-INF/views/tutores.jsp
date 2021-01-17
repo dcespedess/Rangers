@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,64 +22,79 @@ integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZD
 
 <body>
 	<div class="navbar" id="minavbar">
-        <div class="espacio"></div>
-        <div class="navelem">
-            <a href="/" >Home</a>
-            <a href="/tutores" class="activo">Tutores</a>
-            <a href="/registro" >Registro</a>
-            <a href="/testimonios" >Testimonios</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>     
-    </div>
-	
- <a  href="buscarNombre">Ordenar por Nombre</a>
- <a  href="buscarApellido">Ordenar por Apellido</a>
- <a  href="buscarEdad">Ordenar por Edad</a>
- <a  href="buscarSexo">Ordenar por Sexo</a> <br><br>
- 
- 
- <p>Filtrar por Materia</p>
- <form action="buscarArea" method="post">
-<select id="materia" name="materia">
-<option value="" selected>Escoja una opcion</option>
-  <option value="matematicas">Matematicas</option>
-  <option value="lenguaje">Lenguaje</option>
-  <option value="historia">Historia</option>
-  <option value="musica">Musica</option>
-</select>
-<input type="submit" value="Filtrar">
-</form><br><br>
+		<div class="espacio"></div>
+		<div class="navelem">
+			<a href="/">Home</a> <a href="/tutores" class="activo">Tutores</a> <a
+				href="/registro">Registro</a> <a href="/testimonios">Testimonios</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+	</div>
+
+	<a href="buscarNombre">Ordenar por Nombre</a>
+	<a href="buscarApellido">Ordenar por Apellido</a>
+	<a href="buscarEdad">Ordenar por Edad</a>
+	<br>
+	<br>
 
 
-<p>Filtrar por sexo</p>
- <form action="buscarSexo" method="post">
-<select id="sexo" name="sexo">
-<option value="" selected>Escoja una opcion</option>
-  <option value="mujer">Mujer</option>
-  <option value="hombre">Hombre</option>
-</select>
-<input type="submit" value="Filtrar">
-</form>
+	<p>Filtrar por Materia</p>
+	<form action="buscarArea" method="post">
+		<select id="materia" name="materia">
+			<option value="" selected>Escoja una opcion</option>
 
-	<c:forEach items="${usuarios}" var="t">
-		<div class="card card-group">
-			<div class="card-body text-center">
+			<option value="matematicas">Matematicas</option>
+			<option value="lenguaje">Lenguaje</option>
+			<option value="historia">Historia</option>
+			<option value="musica">Musica</option>
+		</select> <input type="submit" value="Filtrar">
+	</form>
+	<br>
+	<br>
+
+
+	<p>Filtrar por sexo</p>
+	<form action="buscarSexo" method="post">
+		<select id="sexo" name="sexo">
+			<option value="" selected>Escoja una opcion</option>
+			<option value="mujer">Mujer</option>
+			<option value="hombre">Hombre</option>
+		</select> <input type="submit" value="Filtrar">
+	</form>
+
+	<br>
+	<div class="card card-columns row"
+		style="background-color: black; display: block;">
+		<c:forEach items="${usuarios}" var="t">
+			<div class="card card-body text-center col-10 "
+				style="color: black; border-radius: 10px; text-align: justify; width: 480px; height: 450px">
 				<p hidden="${t.id}">
-				<p>${t.nombre}</p>
-				<p>${t.apellido}</p>
+				<h4>${t.nombre} ${t.apellido}</h4>
+
+				<hr>
 				<p>${t.materia}</p>
-				<p>${t.edad}</p>
-				<p>${t.correo}</p>
-				<p>${t.celular}</p>
+				<hr>
+				<p>Edad: ${t.edad}</p>
+				<p></p>
+				<hr>
+				<p>Correo: ${t.correo}</p>
+				<hr>
+				<p>Celular: ${t.celular}</p>
+				<hr>
 				<p>${t.sexo}</p>
+				<hr>
+				<h5>Reseña del Tutor</h5>
+
 				<p>${t.descUsuario}</p>
 			</div>
-		</div>
-		
-	</c:forEach>
+		</c:forEach>
+	</div>
 
 
+	<div class="footer">
+		<p>Sitio creado por Daniel Cespedes & Angela Romero & Daniela
+			Caicedo</p>
+	</div>
 </body>
 </html>
