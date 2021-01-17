@@ -194,7 +194,7 @@ input[type=submit] {
   flex-wrap: wrap;
 }
 
-.text-center{
+.centrado{
 	flex: 30%;
 	margin: 15px;
 	color: black; 
@@ -206,7 +206,7 @@ input[type=submit] {
 }
 
 @media (max-width: 650px) {
-  .text-center{
+  .centrado{
     flex: 100%;
   }
 }

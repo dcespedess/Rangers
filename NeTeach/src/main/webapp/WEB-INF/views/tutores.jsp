@@ -74,7 +74,7 @@ integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZD
 <br>
 	<div class="cards">
 		<c:forEach items="${usuarios}" var="t">
-			<div class="card card-body text-center">
+			<div class="card card-body centrado">
 				<p hidden="${t.id}"> </p>
 				
 				<h4>${t.nombre} ${t.apellido}</h4>
