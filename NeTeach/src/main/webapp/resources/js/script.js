@@ -1,5 +1,5 @@
 function myFunction() {
-    var resp = document.getElementById("navbar");
+    var resp = document.getElementById("minavbar");
     if (resp.className === "navbar") {
       resp.className += " responsive";
     } else {
