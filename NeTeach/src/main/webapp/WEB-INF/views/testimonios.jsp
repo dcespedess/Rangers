@@ -98,12 +98,12 @@
 		</div>
 	</div>
 
-	<!-- asdas -->
+	<!-- testimonios -->
 	<div class="row">
 		<c:forEach items="${testimonios}" var="test">
-			<div class="flip-card row " style="display: block">
-				<div class="flip-card-inner card-body text-center  col-xs-12">
-					<div class="flip-card-front card-body text-center  col-xs-12">
+			<div class="flip-card row">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
 						<img
 							src="https://iseo.edu.mx/img/egreso.png"
 							alt="Avatar" style="width: 200px; height: 200px;">

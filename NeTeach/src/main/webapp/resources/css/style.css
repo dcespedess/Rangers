@@ -206,3 +206,24 @@ input[type=submit] {
     flex: 100%;
   }
 }
+
+.flip-card {
+	flex: 25%;
+}
+
+@media (max-width: 950px){
+	.flip-card {
+	flex: 40%;
+	}
+}
+
+@media (max-width: 650px){
+	.flip-card {
+	flex: 60%;
+	}
+	
+	.flip-card-inner {
+	width: 60%!important;
+	margin: auto;
+	}
+}
