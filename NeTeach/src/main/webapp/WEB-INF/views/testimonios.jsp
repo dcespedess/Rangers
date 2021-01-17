@@ -70,21 +70,25 @@ integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZD
 <!-- asdas -->
 
  <c:forEach items="${testimonios}" var="test">
-			<div class="card card-body text-center col-10 "
-				style="color: black; border-radius: 10px; text-align: justify; width: 480px; height: 450px">
+			<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
 				<p hidden="${test.id}">
 				<h4>${test.nombretes}</h4>
-				
-				<hr>
 				
 				<hr>
 				<p>Edad: ${test.edadtes}</p>
 				<p></p>
 				<hr>
 				<p>${test.desctes}</p>
-			
+			 </div>
+  </div>
+</div>
 				
-			</div>
+		
 		</c:forEach>
 
 </body>
