@@ -51,7 +51,8 @@ public class WebController {
 	}
 	
 	@GetMapping("/testimonios") 
-	public String testimonios() { 
+	public String testimonios(Model model) { 
+		
 		  return "testimonios"; 
 	}
 	
@@ -117,6 +118,18 @@ public class WebController {
 			model.addAttribute("usuarios", u);
 			model.addAttribute("usuarios", repUsuario.findAll());
 			return "tutores";
+		}
+	}
+	
+	@PostMapping("agregarTestimonio")
+	public String agregarTestimonio(@Valid @ModelAttribute("testimonio") Testimonio t, BindingResult rs, Model model) {
+		if (rs.hasErrors()) {
+			return "testimonios";
+		} else {
+			repTestimonio.save(t);
+			model.addAttribute("testimonio", t);
+			model.addAttribute("testimonio", repTestimonio.findAll());
+			return "testimonios";
 		}
 	}
 
